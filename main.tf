@@ -96,3 +96,16 @@ resource "helm_release" "opencost" {
   })]
   depends_on = [ null_resource.wait_for_ingress_deployment ]
 }
+
+resource "helm_release" "gitlab_runner" {
+  name       = "gitlab-runner"
+  repository = "https://charts.gitlab.io"
+  chart      = "gitlab-runner"
+  version    = "0.71.0"
+  namespace  = "gitlab-runner"
+  create_namespace = true
+  values = [templatefile("${path.module}/helm/gitlab-runner/values.yaml", {
+    GITLAB_RUNNER_TOKEN = var.gitlab_runner_token
+  })]
+  depends_on = [ null_resource.wait_for_ingress_deployment ]
+}

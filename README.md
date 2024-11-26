@@ -1,4 +1,4 @@
-# Kinda Kind
+# Kubernetes in Docker and Stuff
 
 This is a local kubernetes env setup. This is for testing purposes and learning.
 This repo will deploy a kind (kubernetes-in-docker) cluster and install tooling to make it a bit

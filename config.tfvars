@@ -1,1 +1,0 @@
-wildcard_domain_name = "kind.onlyclouds.net"

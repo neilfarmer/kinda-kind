@@ -2,5 +2,4 @@
 .terraform*
 terraform*
 .env
-
-config.tfvars
+config.tf*

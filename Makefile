@@ -18,14 +18,14 @@ setup-ingress:
 
 plan-terraform:
 	terraform init
-	terraform plan -var-file config.tfvars
+	terraform plan -var-file terraform.tfvars
 
 apply-terraform:
 	terraform init
-	terraform apply -auto-approve -var-file config.tfvars
+	terraform apply -auto-approve -var-file terraform.tfvars
 
 destroy-terraform:
-	terraform destroy -auto-approve -var-file config.tfvars
+	terraform destroy -auto-approve -var-file terraform.tfvars
 
 setup-spark:
 	helm repo add spark-operator https://kubeflow.github.io/spark-operator

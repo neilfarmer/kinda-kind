@@ -14,7 +14,7 @@ more user friendly. Terraform will provision the tooling using the helm and kube
 ## Setup
 
 1. Run the `install.sh` script to install kind or install it how you want to
-2. Create a `config.tfvars` file and add the variables from the `variables.tf`
+2. Create a `terraform.tfvars` file and add the variables from the `variables.tf`
 3. Update dns for services deployed with this automation
    1. Update `/etc/hosts` with the domain name and local ip address or update your DNS provider with a wildcard record for your local ip address
    2. DNS/Services include
@@ -77,5 +77,3 @@ Everything is driven by `make` which is located in the `Makefile`.
 ```sh
 make destroy
 ```
-
-TODO: add metrics server https://gist.github.com/sanketsudake/a089e691286bf2189bfedf295222bd43
